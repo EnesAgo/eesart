@@ -1,0 +1,705 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --first-color-blue: #274C5B;
+    --first-color-blue-hover: #4688a3;
+
+    --seccond-color-green: #68A47F;
+    --seccond-color-green-hover: #5addce;
+
+    --third-color-darkgrey: #525C60;
+    --third-color-darkgrey-hover: #81939a;
+
+    --fourth-color-lime: #7EB693;
+    --fourth-color-lime-hover: #58d987;
+
+    --color-white: #fff;
+    --color-white-hover: #FFFFFFCC;
+    --color-white-darker: #FFFFFF4C;
+
+    --button-background-yellow: #ffd12b;
+    --button-background-yellow-hover: #f5d05d;
+
+    --background-navbar: #4c9e9e;
+    --background-navbar-hover: #008080;
+
+    --footer-banner-background: #FD0006;
+
+    --background-divisor-lightgray: #F1EFF0;
+
+    --background-divisor-lightgray-2: #F9F8F8;
+
+    --background-divisor-lightgray-3: #ECECEC;
+
+
+
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header-menu"
+    "main"
+    "banner"
+    "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+}
+
+
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(177, 177, 177);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+
+.py-75{
+    padding: 75px 0 !important;
+}
+.py-150{
+    padding: 150px 0 !important;
+}
+.active-nav{
+    pointer-events: all !important;
+    opacity: 100% !important;
+    left: 0 !important;
+}
+
+.divisor-section{
+    width: 100%;
+}
+
+.header-menu{
+    grid-area: header-menu;
+
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+
+    background-color: var(--color-white);
+}
+.header-menu .logo{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header-menu .logo img{
+    width: 120px;
+}
+.header-menu .logo .logo-text{
+    font-size: 38px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--first-color-blue);
+}
+.header-menu nav ul{
+    display: flex;
+    gap: 25px;
+
+}
+.header-menu nav ul li a{
+    color: var(--first-color-blue);
+    font-weight: 600;
+    font-size: 16px;
+}
+.header-menu nav ul li a:hover{
+    color: var(--first-color-blue-hover);
+}
+.hamburger-menu{
+    display: none;
+}
+#language{
+    position: relative;
+    cursor: pointer;
+}
+#language > p{
+    position: relative;
+
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--first-color-blue);
+}
+
+#language .down-arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 4px;
+}
+#language ul {
+    display:none;
+    position:absolute;
+    z-index: 20;
+    left:0;
+    background: var(--background-navbar);
+    float:left;
+
+    width: 50px;
+}
+#language:hover ul {
+    display:block;
+}
+#language ul li{
+    border-bottom: 1px solid var(--color-white-darker);
+}
+#language ul li:hover, #language ul li:hover a{
+    background-color: var(--background-navbar-hover);
+}
+#language ul li, #language ul li a {
+    align-items: center;
+
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+
+.banner-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.banner-section img{
+    width: 100%;
+}
+.banner-section header{
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-section header h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--first-color-blue);
+    text-align: center;
+}
+
+
+main{
+    grid-area: main;
+}
+.logo-banner{
+    grid-area: banner;
+}
+footer{
+    grid-area: footer;
+}
+
+
+
+
+/* experience */
+.experience-section{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 80px 0;
+}
+.experience-section header h2{
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+.experience-section section{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+.experience-section section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.experience-section section article h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.experience-section section article p{
+    font-size: 14px;
+}
+
+
+/* about section */
+.about-section{
+    width: 100%;
+    min-height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: var(--background-divisor-lightgray-2);
+}
+.about-section .about-bg-orange{
+    max-width: 500px;
+    width: 100%;
+
+}
+.about-section article header h2{
+
+    font-family: 'Yellowtail', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--seccond-color-green);
+}
+.about-section article section{
+    max-width: 500px;
+    width: 100%;
+}
+.about-section article section h3{
+    font-size: 40px;
+    font-weight: 800;
+
+    margin-bottom: 14px;
+
+    color: var(--first-color-blue);
+}
+.about-section article section p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: var(--third-color-darkgrey);
+}
+.about-section article section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    margin: 46px 0;
+}
+.about-section article section ul li{
+    display: flex;
+    gap: 20px;
+}
+.about-section article section ul li img{
+    width: 70px;
+    height: 70px;
+}
+.about-section article section ul li section{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.about-section article section ul li section h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--first-color-blue);
+}
+.about-section article section ul li section p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: var(--third-color-darkgrey);
+}
+
+.about-section article section a {
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+}
+.about-section article section a button{
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    background: var(--first-color-blue);
+    cursor: pointer;
+}
+.about-section article section a button:hover{
+    background: var(--first-color-blue-hover);
+}
+.about-section article section a button span{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+
+/* product */
+.products-section{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.products-section header h2{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--first-color-blue);
+}
+.products-section article{
+    max-width: 1280px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 0 10px;
+}
+.products-section article ul{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 50px;
+}
+.products-section article ul li, .products-section article ul li a, .products-section article ul li a figure{
+    width: 300px;
+}
+.products-section article ul li a figure{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-divisor-lightgray-2);
+    border-radius: 20px;
+    outline: 2px solid #F9F8F8;
+
+}
+.products-section article ul li a figure img{
+    width: 100%;
+}
+.products-section article ul li a figure figcaption{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--first-color-blue-hover);
+}
+.products-section article .productNav {
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+}
+.products-section article .productNav button{
+    width: 150px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    background: var(--first-color-blue);
+    cursor: pointer;
+}
+.products-section article .productNav button:hover{
+    background: var(--first-color-blue-hover);
+}
+.products-section article .productNav button span{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+
+/* footer banner */
+.footer-banner{
+    width: 100%;
+    background-color: var(--footer-banner-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.footer-banner img{
+    margin-top: 50px;
+    max-width: 1000px;
+    width: 100%;
+
+}
+
+/* footer */
+footer{
+    min-height: 700px;
+
+    background: linear-gradient(180deg, var(--footer-banner-background) 0%, #2C3B38 31.25%);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+footer nav{
+    position: absolute;
+    top: 50%;
+}
+footer nav ul{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer nav ul li{
+    min-width: 200px;
+    height: 200px;
+    margin: 0 30px;
+}
+footer nav ul li section{
+    display: flex;
+    gap: 10px;
+}
+footer nav ul li h3{
+    color: var(--color-white-hover);
+    margin: 10px 0;
+
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+footer nav ul li a{
+    color: var(--color-white-darker);;
+    font-size: 15px;
+    transition: 350ms;
+    line-height: 25px;
+}
+footer nav ul li a:hover{
+    color: var(--color-white);
+}
+footer nav ul li section a img{
+    background-color: var(--color-white);
+    font-size: 15px;
+    transition: 350ms;
+    line-height: 25px;
+    width: 30px;
+    border-radius: 100%;
+}
+footer nav ul li section a:hover img{
+    background-color: var(--color-white-darker);
+
+}
+
+@media only screen and (max-width: 1000px){
+    /* about us section */
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+    }
+    .about-section article section{
+        position: relative;
+    }
+
+    /* product section */
+    .products-section article ul {
+        flex-direction:column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* experience */
+    .experience-section section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    /* header */
+    .header-menu .logo{
+        gap: 15px;
+    }
+    .header-menu .logo img{
+        width: 75px;
+    }
+    .header-menu .logo span{
+        font-size: 25px;
+    }
+    .header-menu nav{
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        top: 150px;
+        left: -100%;
+        z-index: 20;
+
+        background-color: var(--background-navbar);
+        width: 100%;
+
+        transition:  0.4s ease-in-out;
+    }
+    .header-menu nav ul{
+        flex-direction: column;
+        gap: 0;
+    }
+    .header-menu nav ul li{
+        border-bottom: 1px solid var(--color-white-darker);
+    }
+    .header-menu nav ul li:hover{
+        background-color: var(--background-navbar-hover);
+    }
+    .header-menu nav ul li, .header-menu nav ul li a{
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+
+        font-weight: 500;
+        color: var(--color-white);
+    }
+
+    #language ul, #language ul li{
+        width: 100%;
+    }
+    #language .down-arrow{
+        border-color: var(--color-white-hover);
+    }
+    #language:hover .down-arrow {
+        border-color: var(--color-white);
+    }
+
+
+    .hamburger-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 10px;
+    }
+    .hamburger-menu .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .hamburger-menu .hamburger-lines {
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .hamburger-menu .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+
+    .hamburger-menu .hamburger-lines .line1 {
+        transition:  0.4s ease-in-out;
+    }
+
+    .hamburger-menu .hamburger-lines .line2 {
+        transition: 0.4s ease-in-out;
+    }
+
+    .hamburger-menu .hamburger-lines .line3 {
+        transition:  0.4s ease-in-out;
+    }
+    .hamburger-menu input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        width: 90%;
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        width: 60%;
+    }
+
+    .hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        width: 90%;
+    }
+
+
+    /*footer*/
+    footer{
+        min-height: 1100px;
+    }
+    footer nav{
+        top: 35%;
+    }
+    footer nav ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    footer nav ul li section{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 600px){
+    .about-section {
+        padding: 25px 15px !important;
+    }
+    .about-section img{
+        max-width: 300px;
+    }
+}
