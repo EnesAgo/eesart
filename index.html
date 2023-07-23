@@ -5,9 +5,282 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <title>EESART</title>
+    <meta name="author" content="Enes Ago">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="copyright" content="&copy; 2023-today eesart">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" hreflang="en" href="https://eesart.shop/en" />
+    <link rel="alternate" hreflang="tr" href="https://eesart.shop/tr" />
+    <link rel="alternate" hreflang="tr" href="https://eesart.shop/mk" />
+    <link rel="alternate" hreflang="x-default" href="https://eesart.shop/" />
+
+    <link rel="alternate" hreflang="en" href="https://eesart.shop/en" />
+    <link rel="alternate" hreflang="tr" href="https://eesart.shop/tr" />
+    <link rel="alternate" hreflang="tr" href="https://eesart.shop/mk" />
+    <link rel="alternate" hreflang="x-default" href="https://eesart.shop/" />
+
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="author" type="text/plain" href="humans.txt">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'>
+    <link rel="stylesheet" href="generalStyles.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@AgoEnes">
+    <meta name="twitter:creator" content="@AgoEnes">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="https://eesart.shop">
+    <meta name="twitter:image" content="https://eesart.shop/Logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="EESART">
+    <meta property="article:author" content="https://www.instagram.com/agoenes/">
+    <meta property="og:title" content="EESART">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://eesart.shop">
+    <meta property="og:image" content="https://eesart.shop/Logo.png">
+
+    <meta name="google-site-verification" content="4EBGh8UfEJqaqSF2cTDQ8_4s3ArYzSb18xXlrl9v5eI">
+
+    <script defer src="js/index.js"></script>
+
 </head>
 <body>
+
+    <header class="header-menu">
+        <a href="/" rel="home" class="logo">
+            <img alt="logo" src="img/Logo.jpeg" />
+            <span class="logo-text"><span>EESART</span></span>
+        </a>
+        <nav id="hamburger-menu">
+            <ul>
+                <li>
+                    <a href="/" rel="home" >Home</a>
+                </li>
+                <li>
+                    <a href="/about" rel="about">About</a>
+                </li>
+                <li>
+                    <a href="/products" rel="products">Gallery / Paintings</a>
+                </li>
+                <li>
+                    <a href="/gallery" rel="Gallery">Shop</a>
+                </li>
+                <li>
+                    <a href="/contact" rel="contact">Contact</a>
+                </li>
+<!--                <li id="language">-->
+
+<!--                    <p>EN <i class="down-arrow"></i></p>-->
+<!--                    <ul>-->
+<!--                        <li><a href="/tr/">TR</a></li>-->
+<!--                        <li><a href="/mk/">MK</a></li>-->
+<!--                    </ul>-->
+
+<!--                </li>-->
+            </ul>
+        </nav>
+        <section class="hamburger-menu" onclick="hamburgerMenuToggle()">
+            <input class="checkbox" type="checkbox"/>
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="divisor-section divisor-section-1">
+            <img src="img/home/banner.jpeg" alt="banner background image" class="banner-img">
+
+            <article>
+                <header>
+                    <h1>EESART</h1>
+                </header>
+                <p>A Unique
+                Selection For
+                You</p>
+
+                <a href="/products" rel="products">
+                    <button>
+                        <span>Shop</span>
+                    </button>
+                </a>
+            </article>
+
+        </section>
+
+        <section class="divisor-section divisor-section-2 experience-section">
+            <header>
+                <h2>Your Imagination <br />
+                    Is Your Painting</h2>
+            </header>
+
+            <section>
+
+                <article>
+                    <h3>25</h3>
+                    <p>Oil Paintings</p>
+                </article>
+
+                <article>
+                    <h3>32</h3>
+                    <p>Drawings</p>
+                </article>
+
+                <article>
+                    <h3>75</h3>
+                    <p>Hand Made</p>
+                </article>
+
+            </section>
+        </section>
+
+        <section class="divisor-section divisor-section-3 gallery-section">
+            <section class="gallery-container">
+                <figure>
+                    <img src="img/home/home-gallery/oil-paintings.png" alt="vegetables">
+                    <figcaption>Oil Paintings</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/home/home-gallery/drawings.png" alt="vegetables">
+                    <figcaption>Drawings</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/home/home-gallery/bag.png" alt="vegetables">
+                    <figcaption>Hand Made</figcaption>
+                </figure>
+            </section>
+        </section>
+
+        <section class="divisor-section divisor-section-4 icon-sections">
+            <article>
+                <img src="img/icons/about-icons/unique.jpeg" alt="unique art">
+                <h2>Unique Original Art</h2>
+                <p>Buy affordable paintings online and art created by talented artists</p>
+            </article>
+            <article>
+                <img src="img/icons/about-icons/independent-artist.jpeg" alt="unique art">
+                <h2>Independent Artist</h2>
+                <p>Macedonia's best Artist Esra Dehar</p>
+            </article>
+            <article>
+                <img src="img/icons/about-icons/peace-of-mind.jpeg" alt="unique art">
+                <h2>Peace of Mind</h2>
+                <p>Safe and secure shopping</p>
+            </article>
+            <article>
+                <img src="img/icons/about-icons/personal-service.jpeg" alt="unique art">
+                <h2>Personal Service</h2>
+                <p>Caring and personal 5 star service. Your request, our vision</p>
+            </article>
+        </section>
+
+        <section class="divisor-section divisor-section-6 products-section">
+            <header>
+                <h2>Gallery</h2>
+            </header>
+            <article>
+                <ul>
+                    <li>
+                        <a href="/products">
+                            <figure>
+                                <img src="img/paintings/AlexanderTheGreat.jpeg" alt="AlexanderTheGreat">
+                                <figcaption>Alexander The Great</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/products">
+                            <figure>
+                                <img src="img/paintings/StatueOfLiberty.jpeg" alt="StatueOfLiberty">
+                                <figcaption>Statue Of Liberty</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/products">
+                            <figure>
+                                <img src="img/paintings/TurkishCarpet.jpeg" alt="TurkishCarpet">
+                                <figcaption>Old Turkish Carpet</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+                <a href="/products" rel="products" class="productNav">
+                    <button>
+                        <span>Gallery</span>
+                    </button>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <h3>Company</h3>
+
+                    <a href="/">Home</a> <br />
+                    <a href="/about">About Us</a> <br />
+                    <a href="/products">Products</a> <br />
+                    <a href="/gallery">Gallery</a> <br />
+                    <a href="/contact">Contact</a> <br />
+
+                    <br />
+                    <p style="color: white">&copy; 2023-today EESART</p>
+                </li>
+                <li>
+                    <h3>CEO & Painter</h3>
+
+                    <a href="tel:070833835">Esra Dehar</a> <br />
+
+                    <h3>Developer</h3>
+
+                    <a href="https://www.instagram.com/agoenes/">Enes Ago</a> <br />
+                </li>
+                <li>
+                    <h3>Contact</h3>
+
+                    <a href="#">Bistrica br.1-A2/4 Ohrid</a> <br />
+
+                    <a href="tel:+38970215348">070/215 348</a> <br />
+                    <a href="tel:+38970501771">070/501 771</a> <br />
+
+                    <h3>Social Media</h3>
+
+                    <section>
+                        <a href="https://www.facebook.com/eesart" target="_blank" class="footerIcons">
+                            <img src="img/icons/facebook-icon.png" alt="facebook">
+                        </a>
+                        <!--                        <a href="https://twitter.com" target="_blank" class="footerIcons">-->
+                        <!--                            <img src="img/icons/twitter-icon.png" alt="twitter">-->
+                        <!--                        </a>-->
+                        <a href="https://www.instagram.com/eesart" target="_blank" class="footerIcons">
+                            <img src="img/icons/instagram-icon.png" alt="instagram">
+                        </a>
+                    </section>
+
+                </li>
+            </ul>
+        </nav>
+    </footer>
 
 </body>
 </html>
