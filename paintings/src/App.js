@@ -1,9 +1,13 @@
 import React from "react";
+import {Route, Routes} from "react-router-dom";
+import Paintings from "./pages/Paintings";
 function App() {
   return (
-    <main className="App">
-      Hello
-    </main>
+    <>
+        <Routes>
+            <Route path="/" element={<Paintings />} />
+        </Routes>
+    </>
   );
 }
 
