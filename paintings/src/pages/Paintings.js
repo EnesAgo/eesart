@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { addDoc, collection, onSnapshot} from "firebase/firestore";
 import expObj from "../firebase/firebaseInit";
+import OnePainting from "../view/Painting";
 function Paintings() {
 
     const [paintings, setPaintings] = useState([])
+    const [paintingData, setPaintingData] = useState([])
+    const [filter, setFilter] = useState('')
 
     const {firestoreDb} = expObj
     const colletionRef = collection(firestoreDb, 'paintings');
@@ -31,6 +34,7 @@ function Paintings() {
                 items.push(doc.data());
             });
             setPaintings(items)
+            setPaintingData(items)
         });
     }
 
@@ -39,11 +43,45 @@ function Paintings() {
     }, [])
 
 
+    useEffect(() => {
+
+        let items = [];
+        paintingData.forEach(e => {
+            if(e.name.toLowerCase().includes(filter.toLowerCase())){
+                items.push(e)
+            }
+        })
+
+        setPaintings(items)
+
+
+    }, [filter])
+
 
     return (
-        <div>
-            <button onClick={() => {PostD()}}>Click</button>
-        </div>
+        <>
+            {/*<button onClick={() => {PostD()}}>Click</button>*/}
+
+            <section className={"filterCover"}>
+                <div className={"filter"}>
+                    <h3>Filter:</h3>
+                    <input placeholder={"filter 🔍"} type="text" onChange={(e) => setFilter(e.target.value)} />
+                    {/*<button onClick={() => {setFilter('')}}>clear filter</button>*/}
+                </div>
+           </section>
+
+            <section className="paintingCover">
+                <div className="paintingsSection">
+                    {
+                        paintings && paintings.map((e, i) => (
+                            <OnePainting key={i} name={e.name} price={e.price} url={e.imgs[0]} />
+                        ))
+                    }
+                </div>
+            </section>
+
+
+        </>
     );
 }
 
