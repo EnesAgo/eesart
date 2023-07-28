@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function OnePainting({name, price, url}) {
+function OnePainting({name, price, url, docId}) {
     return (
         <article className={"painting"}>
             <div>
@@ -9,7 +9,7 @@ function OnePainting({name, price, url}) {
             </div>
             <header>
                 <h2>{name} - {price}€</h2>
-                <Link to={`/paintings/${name}`}>
+                <Link to={`/paintings/${docId}`}>
                     <button>
                         BUY
                     </button>

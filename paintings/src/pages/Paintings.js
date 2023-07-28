@@ -31,10 +31,12 @@ function Paintings() {
         const unsub = onSnapshot(colletionRef, (querySnapshot) => {
             const items = [];
             querySnapshot.forEach((doc) => {
-                items.push(doc.data());
+                items.push({docId: doc.id, ...doc.data()});
             });
             setPaintings(items)
             setPaintingData(items)
+
+            console.log(items)
         });
     }
 
@@ -74,7 +76,7 @@ function Paintings() {
                 <div className="paintingsSection">
                     {
                         paintings && paintings.map((e, i) => (
-                            <OnePainting key={i} name={e.name} price={e.price} url={e.imgs[0]} />
+                            <OnePainting key={i} name={e.name} price={e.price} url={e.imgs[0]} docId={e.docId} />
                         ))
                     }
                 </div>
