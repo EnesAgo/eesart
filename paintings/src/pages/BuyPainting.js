@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import expObj from "../firebase/firebaseInit";
 import { doc, onSnapshot} from "firebase/firestore";
+import ImageSlider from "../view/ImageSlider";
 
-import Slider from "react-slick";
 
 function BuyPainting() {
 
@@ -28,6 +28,16 @@ function BuyPainting() {
     }, [])
     useEffect(() => {
 
+        if(painting){
+            const altImages = [];
+            painting.imgs.forEach(e => {
+                altImages.push({
+                    src: e,
+                    alt: painting.desc
+                })
+            })
+            setImages(altImages)
+        }
 
     }, [painting])
 
@@ -35,31 +45,30 @@ function BuyPainting() {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 300,
+        speed: 500,
         slidesToShow: 1,
-        adaptiveHeight: true,
-        slidesToScroll: 1,
-        variableWidth: true
-
+        slidesToScroll: 1
     };
 
     return (
         <>
 
-            <section className={"buyProduct"}>
+            <section className={"buySection section"}>
 
-                <section>
-                    <Slider {...settings} >
-                        {painting && painting.imgs.map(e => (
-                            <div>
-                                <img src={e} alt={e} width={"400px"}/>
-                            </div>
-                        ))}
-                    </Slider>
-                </section>
-                <section>
+                <section className={"slider"}>
+
+                    {
+                        images && <ImageSlider data={images} />
+                    }
+                    <h1>{painting && painting.name}</h1>
 
                 </section>
+                <section className={"buyProgress"}>
+
+                </section>
+
+            </section>
+            <section className={"section buyDetailSection"}>
 
             </section>
 

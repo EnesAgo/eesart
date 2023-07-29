@@ -376,6 +376,35 @@ footer{
 }
 
 
+
+.buySection{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.buySection .slider .carousel{
+
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin: 10px 30px;
+
+}
+.buySection .slider h1{
+    margin: 10px 30px;
+    font-size: 30px;
+}
+.buySection .buyProgress{
+    margin: 0 30px;
+}
+
+.buyDetailSection{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* footer */
 footer{
     min-height: 500px;
@@ -384,7 +413,8 @@ footer{
     /*background: #2C3B38;*/
 
     background: rgb(44,59,56);
-    background: linear-gradient(0deg, rgba(44,59,56,1) 45%, rgba(49,122,108,1) 100%);
+    /*background: linear-gradient(0deg, rgba(44,59,56,1) 45%, rgba(49,122,108,1) 100%);*/
+    background: linear-gradient(0deg, rgba(44,59,56,1) 60%, #ff77bb 100%);
 
     display: flex;
     justify-content: center;
