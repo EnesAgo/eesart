@@ -60,10 +60,33 @@ function BuyPainting() {
                     {
                         images && <ImageSlider data={images} />
                     }
-                    <h1>{painting && painting.name}</h1>
+                    {/*<h1>{painting && painting.name}</h1>*/}
 
                 </section>
                 <section className={"buyProgress"}>
+                    <h2 className={"paintingName"}>{painting && painting.name}</h2>
+                    <p className={"paintingDetail"}>{painting && painting.category}</p>
+                    <p className={"paintingDetail"}>by Esra Dehar</p>
+                    <p className={"stars"}>★★★★★</p>
+                    <p className={"price"}>€{painting && painting.price}</p>
+
+                    <ul>
+                        {
+                            painting && painting.details.map((e) => (
+                                <li><span>{e}</span></li>
+                            ))
+                        }
+                    </ul>
+
+                    {
+                        painting &&
+                        <a
+                            href={`mailto:contact@esartshop.com?subject=Buying%20the%20piece%20%23${docId}&body=Hello%20I%20wanna%20buy%20${painting.name}%2C%20`}
+                        >
+                            <button>BUY / Contact Artist</button>
+                        </a>
+                    }
+
 
                 </section>
 

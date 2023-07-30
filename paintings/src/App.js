@@ -8,12 +8,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Paintings />} />
 
-            <Route
-                path="/paintings"
-                element={<Navigate to="/" replace />}
-            />
-
-            <Route path="/paintings/:docId" element={<BuyPainting />} />
+            <Route path="/:docId" element={<BuyPainting />} />
 
             <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
