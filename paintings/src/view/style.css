@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 720px;
-    height: 480px;
+    max-width: 720px;
+    max-height: 480px;
     background: rgba(0,0,0,0.01);
     padding: 10px;
 }

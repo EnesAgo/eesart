@@ -824,6 +824,16 @@ footer nav ul li section a:hover img{
     }
 
 
+    /*buySection*/
+    .buySection{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buySection .buyProgress{
+        width: auto;
+    }
+
+
     /*footer*/
     footer{
         min-height: 1100px;
