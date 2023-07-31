@@ -31,6 +31,7 @@
     --background-navbar-hover: #008080;
 
     --footer-banner-background: #FD0006;
+    --footer-banner-background-hover: #de0005;
 
     --background-divisor-lightgray: #F1EFF0;
 
@@ -375,6 +376,240 @@ footer{
     color: var(--color-white);
 }
 
+/*contact*/
+.contact-divizor-section-1{
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    background: #F8F9FA;
+}
+.contact-divizor-section-1 h1{
+    font-size: 50px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+.contact-divizor-section-1 p{
+    display: block;
+    text-align: left;
+    max-width: 700px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.6);
+}
+.contact-divizor-section-2{
+    min-height: 300px;
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    gap: 75px;
+    flex-wrap: wrap;
+}
+.contact-divizor-section-2 article{
+    position: relative;
+    max-width: 250px;
+    width: 100%;
+    height: 380px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.contact-divizor-section-2 article::before{
+    content: "";
+    width: 3px;
+    height: 50px;
+    background: coral;
+
+    position: absolute;
+    top: 3%;
+    left: 0;
+}
+.contact-divizor-section-2 article:nth-child(2n)::before {
+    background: green;
+}
+.contact-divizor-section-2 .inner{
+    width: 80%;
+    height: 95%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+}
+.contact-divizor-section-2 article header{
+    width: 100%;
+}
+.contact-divizor-section-2 article header h2{
+    font-size: 30px;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+}
+.contact-divizor-section-2 article p {
+    font-family: sans-serif;
+    width: 100%;
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: rgba(0,0,0,0.7);
+}
+.contact-divizor-section-2 article .articleButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    max-width: 180px;
+    width: 100%;
+    height: 70px;
+
+    color: #03f;
+    border: 2px solid #03f;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 7px;
+
+    transition: 300ms;
+}
+.contact-divizor-section-2 article .articleButton:hover{
+    color: #fff;
+    background: #03f;
+}
+.contact-divizor-section-3{
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F8F9FA;
+
+}
+.contact-divizor-section-3 p{
+    display: block;
+    text-align: left;
+    max-width: 700px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.6);
+    line-height: 25px;
+}
+.contact-divizor-section-3 p a{
+    color: #0000EE;
+}
+.contact-divizor-section-3 p a:hover{
+    color: #4f4fff;
+
+}
+
+/*paintings*/
+.buySection{
+    margin: 50px 0;
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+.buySection .slider .carousel{
+
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);*/
+    margin: 10px 30px;
+
+}
+.buySection .buyProgress{
+    max-width: 500px;
+    width: 100%;
+    margin: 10px 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: flex-start;
+}
+.buySection .buyProgress .paintingName{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.buySection .buyProgress .paintingDetail{
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.buySection .buyProgress .stars{
+    color: red;
+    letter-spacing: 5px;
+}
+.buySection .buyProgress .price{
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.buySection .buyProgress a{
+    max-width: 300px;
+    width: 100%;
+    height: 60px;
+}
+.buySection .buyProgress button{
+    width: 100%;
+    height: 100%;
+    background: var(--footer-banner-background);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 15px 0;
+
+    font-size: 18px;
+}
+.buySection .buyProgress button:hover{
+    background: var(--footer-banner-background-hover);
+
+}
+.buySection .buyProgress ul{
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.buySection .buyProgress ul li{
+    list-style: disc inside;
+}
+.buySection .buyProgress ul li span{
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+
+    position: relative;
+    left: -5px;
+
+}
+
+.buySection .slider h1{
+    margin: 10px 30px;
+    font-size: 30px;
+}
+.buySection .buyProgress{
+    margin: 0 30px;
+}
+
+.buyDetailSection{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* footer */
 footer{
@@ -384,7 +619,8 @@ footer{
     /*background: #2C3B38;*/
 
     background: rgb(44,59,56);
-    background: linear-gradient(0deg, rgba(44,59,56,1) 45%, rgba(49,122,108,1) 100%);
+    /*background: linear-gradient(0deg, rgba(44,59,56,1) 45%, rgba(49,122,108,1) 100%);*/
+    background: linear-gradient(0deg, rgba(44,59,56,1) 60%, #ff77bb 100%);
 
     display: flex;
     justify-content: center;
@@ -579,6 +815,12 @@ footer nav ul li section a:hover img{
 
     .hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         width: 90%;
+    }
+
+    .icon-sections{
+        flex-wrap: wrap;
+        row-gap: 50px;
+        align-items: center;
     }
 
 
