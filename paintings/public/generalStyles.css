@@ -515,7 +515,9 @@ footer{
 /*paintings*/
 .buySection{
     margin: 50px 0;
+    min-height: 720px;
     display: flex;
+    align-items: center;
     /*justify-content: space-between;*/
     justify-content: center;
     gap: 50px;
