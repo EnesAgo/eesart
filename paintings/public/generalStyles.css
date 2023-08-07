@@ -339,8 +339,10 @@ footer{
 
 }
 .products-section article ul li a figure img{
+    max-height: 220px;
     width: 100%;
     border-radius: 20px;
+    /*object-fit: contain;*/
 
 }
 .products-section article ul li a figure figcaption{
