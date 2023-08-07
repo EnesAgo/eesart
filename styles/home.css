@@ -6,6 +6,7 @@
 }
 .divisor-section-1 img{
     width: 100%;
+    filter: brightness(80%);
 }
 .divisor-section-1 article {
     position: absolute;
@@ -79,6 +80,7 @@
     position: relative;
 }
 .divisor-section-3 .gallery-container figure img{
+    max-height: 402px;
     max-width: 400px;
     width: 100%;
 }
