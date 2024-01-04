@@ -68,7 +68,7 @@ function BuyPainting() {
                     <p className={"paintingDetail"}>{painting && painting.category}</p>
                     <p className={"paintingDetail"}>by Esra Dehar</p>
                     <p className={"stars"}>★★★★★</p>
-                    <p className={"price"}>€{painting && painting.price}</p>
+                    {/*<p className={"price"}>€{painting && painting.price}</p>*/}
 
                     <ul>
                         {

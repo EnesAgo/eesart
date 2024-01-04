@@ -8,7 +8,8 @@ function OnePainting({name, price, url, docId}) {
                 <img src={url} alt={name} />
             </div>
             <header>
-                <h2>{name} - {price} €</h2>
+                {/*<h2>{name} - {price} €</h2>*/}
+                <h2>{name}</h2>
                 <Link to={`/${docId}`}>
                     <button>
                         BUY
