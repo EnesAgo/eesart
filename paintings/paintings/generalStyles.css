@@ -339,8 +339,10 @@ footer{
 
 }
 .products-section article ul li a figure img{
+    max-height: 220px;
     width: 100%;
     border-radius: 20px;
+    /*object-fit: contain;*/
 
 }
 .products-section article ul li a figure figcaption{
@@ -515,7 +517,9 @@ footer{
 /*paintings*/
 .buySection{
     margin: 50px 0;
+    min-height: 720px;
     display: flex;
+    align-items: center;
     /*justify-content: space-between;*/
     justify-content: center;
     gap: 50px;
